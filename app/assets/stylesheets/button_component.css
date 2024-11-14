@@ -1,0 +1,89 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    padding-inline: var(--special-padding-left, 0.75em);
+    border: none;
+    border-radius: 0.6em;
+    font-weight: 500;
+    font-size: var(--text-medium);
+    color: var(--button-fg-color, #fff);
+    background-color: var(--button-bg-color, #007bff);
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.button:hover {
+    background-color: var(--button-hover-bg-color, #0056b3);
+}
+
+
+.button--outlined {
+    background: none;
+    color: var(--button-bg-color);
+    border: 1px solid CurrentColor;
+}
+
+.button--outlined:hover{
+    background-color: var(--button-hover-light-bg-color);
+}
+
+.button--primary {
+    --button-fg-color: var(--primary-00);
+    --button-bg-color: var(--primary-60);
+    --button-hover-bg-color: var(--primary-80);
+    --button-hover-light-bg-color: var(--primary-05);
+}
+.button--secondary {
+    --button-fg-color: var(--primary-60);
+    --button-bg-color: var(--primary-15);
+    --button-hover-bg-color: var(--primary-30);
+    --button-fg-light-color: var(--primary-40);
+    --button-hover-light-bg-color: var(--primary-05);
+}
+
+.button--outlined {
+    color: var(--button-fg-light-color);
+}
+
+.button--danger {
+    --button-fg-color: #fff;
+    --button-bg-color: #dc3545;
+    --button-hover-bg-color: #c82333;
+    --button-hover-light-bg-color: #efc8c8;
+}
+.button--success {
+    --button-fg-color: #fff;
+    --button-bg-color: #28a745;
+    --button-hover-bg-color: #218838;
+    --button-hover-light-bg-color: #c3ddc5;
+}
+
+.button--small {
+    font-size: 0.875rem;
+}
+.button--medium {
+    font-size: 1rem;
+}
+.button--large {
+    font-size: 1.125rem;
+}
+
+.button--disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.button--icon{
+    --special-padding-left: 0.75em;
+    column-gap: 0.75em;
+}
+
+
+.button__icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    margin: 0;
+}

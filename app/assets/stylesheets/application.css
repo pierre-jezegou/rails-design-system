@@ -8,3 +8,25 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+    font-family: "Segoe UI", Roboto, Helvetica;
+}
+
+body{
+    padding: 1em;
+}
+
+.svg_icon {
+    height: var(--text-medium);
+    width: var(--text-medium);
+}
+

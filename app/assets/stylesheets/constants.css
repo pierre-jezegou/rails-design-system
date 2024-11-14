@@ -1,0 +1,22 @@
+:root {
+    --text-medium: 1em;
+    --spacing-lg: 0.05em;
+
+
+
+    --primary-100: #000000;
+    --primary-95: #080C08;
+    --primary-90: #101717;
+    --primary-85: #182322;
+    --primary-80: #202E2D;
+    --primary-70: #2F4644;
+    --primary-60: #3F5D5A;
+    --primary-50: #4F7471;
+    --primary-40: #708E8C;
+    --primary-30: #91A8A7;
+    --primary-20: #B2C3C1;
+    --primary-15: #C3D0CF;
+    --primary-10: #D3DDDC;
+    --primary-05: #E4EAEA;
+    --primary-00: #F4F7F7;
+}
