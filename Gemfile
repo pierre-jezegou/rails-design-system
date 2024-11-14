@@ -57,6 +57,7 @@ group :development do
   gem "lookbook", ">= 2.3.4"
   gem "listen"
   gem "actioncable"
+  gem "rubocop", "~> 1.68"
 end
 
 group :test do

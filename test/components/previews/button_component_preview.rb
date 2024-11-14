@@ -11,7 +11,7 @@ class ButtonComponentPreview < Lookbook::Preview
     render(ButtonComponent.new(
       text: "New button",
       path: "/",
-      icon: 'icon_plus'
+      icon: "icon_plus"
     ))
   end
 
@@ -27,7 +27,7 @@ class ButtonComponentPreview < Lookbook::Preview
     render(ButtonComponent.new(
       text: "New button",
       path: "/",
-      icon: 'icon_plus',
+      icon: "icon_plus",
       outlined: true
     ))
   end
@@ -37,7 +37,7 @@ class ButtonComponentPreview < Lookbook::Preview
       text: "New button",
       type: :secondary,
       path: "/",
-      icon: 'icon_plus'
+      icon: "icon_plus"
     ))
   end
 
@@ -46,7 +46,7 @@ class ButtonComponentPreview < Lookbook::Preview
       text: "New button",
       type: :secondary,
       path: "/",
-      icon: 'icon_plus',
+      icon: "icon_plus",
       outlined: true
     ))
   end
@@ -54,8 +54,7 @@ class ButtonComponentPreview < Lookbook::Preview
   def icon_only
     render(ButtonComponent.new(
       path: "/",
-      icon: 'icon_edit'
+      icon: "icon_edit"
     ))
   end
-
 end
