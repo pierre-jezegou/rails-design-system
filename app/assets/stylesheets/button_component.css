@@ -59,6 +59,11 @@
     --button-hover-light-bg-color: #c3ddc5;
 }
 
+.button--tiny {
+    font-size: 0.75rem;
+    font-size: 0.75rem;
+}
+
 .button--small {
     font-size: 0.875rem;
 }
@@ -84,6 +89,5 @@
 .button__icon {
     width: 1em;
     height: 1em;
-    fill: currentColor;
-    margin: 0;
+    fill: CurrentColor;
 }
