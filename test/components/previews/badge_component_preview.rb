@@ -9,7 +9,7 @@ class BadgeComponentPreview < Lookbook::Preview
   end
 
   def square
-    render(BadgeComponent.new(icon: 'icon_edit', square: true))
+    render(BadgeComponent.new(icon: 'profile', square: true))
   end
 
   def danger
