@@ -19,4 +19,9 @@
     --primary-10: #D3DDDC;
     --primary-05: #E4EAEA;
     --primary-00: #F4F7F7;
+
+
+    --small-radius: 0.5em;
+    --medium-radius: 1em;
+    --large-radius: 1.5em;
 }
