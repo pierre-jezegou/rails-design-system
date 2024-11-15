@@ -1,0 +1,7 @@
+.banner {
+    &.banner--default {
+        display: flex;
+        column-gap: 0.75em;
+        align-items: center;
+    }
+}

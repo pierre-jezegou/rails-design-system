@@ -6,7 +6,7 @@ class CardComponentPreview < Lookbook::Preview
       footer_main_action_title: "Primary",
       footer_secondary_action_title: "Secondary"
     )) do
-      tag.div("This is the card content", class: "card-content")
+      tag.div("This is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card content", class: "card-content")
     end
   end
 

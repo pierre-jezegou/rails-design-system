@@ -50,7 +50,6 @@
     color: var(--primary-60);
     background: none;
     border: none;
-
     &:hover{
         background-color: var(--primary-15);
     }

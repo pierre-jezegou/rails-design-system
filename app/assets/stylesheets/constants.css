@@ -1,8 +1,7 @@
 :root {
     --text-medium: 0.75rem;
+    --text-large: 1rem;
     --spacing-lg: 0.05em;
-
-
 
     --primary-100: #000000;
     --primary-95: #080C08;
@@ -20,6 +19,12 @@
     --primary-05: #E4EAEA;
     --primary-00: #F4F7F7;
 
+    --success-font-color: #28a745;
+    --success-font-color-light: #c3ddc5;
+    --danger-font-color: #c82333;
+    --danger-font-color-light: #efc8c8;
+    --warning-font-color: #ffcc00;
+    --warning-font-color-light: #fff7dd;
 
     --small-radius: 0.5em;
     --medium-radius: 1em;

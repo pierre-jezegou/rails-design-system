@@ -13,18 +13,20 @@ class CardComponent < ViewComponent::Base
     </div>
   ERB
 
-  def initialize(title: nil, header_action_title: nil, footer_main_action_title: nil, footer_secondary_action_title: nil)
+  def initialize(title: nil, header_action_title: nil, footer_main_action_title: nil, footer_secondary_action_title: nil, classes: nil)
     @title = title
     @header_action_title = header_action_title
     @footer_main_action_text = footer_main_action_title
     @footer_secondary_action_text = footer_secondary_action_title
+    @additional_classes = classes
   end
 
   def classes
     [
       "card",
       !@title.nil? && !@header_action_title.nil? ? "card--with-header" : nil,
-      @footer_main_action_text.nil? || @footer_secondary_action_text.nil? ? "card--no-footer" : nil
+      @footer_main_action_text.nil? || @footer_secondary_action_text.nil? ? "card--no-footer" : nil,
+      @additional_classes
     ].compact.join(" ")
   end
 end
