@@ -19,6 +19,7 @@ html {
     overflow-y: scroll;
     height: 100%;
     font-family: "Segoe UI", Roboto, Helvetica;
+    font-size: var(--text-medium);
 }
 
 body{
