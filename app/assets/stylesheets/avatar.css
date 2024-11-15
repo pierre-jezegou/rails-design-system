@@ -1,0 +1,22 @@
+.avatar{
+    object-fit: cover;
+    border: 0.25em solid CurrentColor;
+    &.avatar--medium{
+        height: 5em;
+        width: 5em;
+    }
+
+    &.avatar--circle{
+        border-radius: 50%;
+    }
+
+    &.avatar--square{
+        border-radius: var(--medium-radius);
+    }
+
+    &.avatar--no-stroke {
+        border: none;
+    }
+}
+
+
