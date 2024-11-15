@@ -23,6 +23,7 @@ html {
 
 body{
     padding: 1em;
+    color: var(--primary-70)
 }
 
 .svg_icon {
