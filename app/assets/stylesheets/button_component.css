@@ -46,6 +46,16 @@
     color: var(--button-fg-light-color);
 }
 
+.button--plain {
+    color: var(--primary-60);
+    background: none;
+    border: none;
+
+    &:hover{
+        background-color: var(--primary-15);
+    }
+}
+
 .button--danger {
     --button-fg-color: #fff;
     --button-bg-color: #dc3545;

@@ -20,11 +20,12 @@ html {
     height: 100%;
     font-family: "Segoe UI", Roboto, Helvetica;
     font-size: var(--text-medium);
+    line-height: 1.5em;
 }
 
 body{
     padding: 1em;
-    color: var(--primary-70)
+    color: var(--primary-70);
 }
 
 .svg_icon {
