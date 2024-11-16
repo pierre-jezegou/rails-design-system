@@ -14,12 +14,13 @@ class BadgeComponent < ViewComponent::Base
     </div>
   ERB
 
-  def initialize(text: nil, icon: nil, square: false, type: :default, border: false)
+  def initialize(text: nil, icon: nil, square: false, type: :default, border: false, size: :medium)
     @text = text
     @icon = icon
     @square = square
     @type = type
     @border = border
+    @size = size
   end
 
   def classes
@@ -27,6 +28,7 @@ class BadgeComponent < ViewComponent::Base
       "badge",
       @square? "badge--square" : nil,
       @border? "badge--border" : nil,
+      "badge--#{@size}",
       badge_class(@type)
     ].compact.join(" ")
   end

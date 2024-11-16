@@ -1,6 +1,8 @@
 :root {
+    --text-small: 0.5rem;
     --text-medium: 0.75rem;
     --text-large: 1rem;
+    --text-huge: 1.5rem;
     --spacing-lg: 0.05em;
 
     --primary-100: #000000;
@@ -26,7 +28,7 @@
     --warning-font-color: #ffcc00;
     --warning-font-color-light: #fff7dd;
 
-    --small-radius: 0.5em;
-    --medium-radius: 1em;
-    --large-radius: 1.5em;
+    --small-radius: 0.5rem;
+    --medium-radius: 1rem;
+    --large-radius: 1.5rem;
 }

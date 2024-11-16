@@ -5,6 +5,7 @@
     background-color: var(--primary-05);
     border-radius: var(--medium-radius);
     align-items: center;
+    justify-content: center;
 
     svg{
         width: var(--text-large);
@@ -17,6 +18,21 @@
         width: var(--text-large);
         padding: 0.5em;
         border-radius: var(--small-radius);
+
+        &.badge--medium {
+            height: var(--text-large);
+            width: var(--text-large);
+        }
+        &.badge--large {
+            height: var(--text-huge);
+            width: var(--text-huge);
+
+            svg{
+                width: var(--text-huge);
+                height: var(--text-huge);
+            }
+        }
+
     }
 
     &.badge--border{

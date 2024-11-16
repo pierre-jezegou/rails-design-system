@@ -2,8 +2,8 @@
     object-fit: cover;
     border: 0.25em solid CurrentColor;
     &.avatar--medium{
-        height: 5em;
-        width: 5em;
+        height: 5rem;
+        width: 5rem;
     }
 
     &.avatar--circle{
@@ -16,6 +16,14 @@
 
     &.avatar--no-stroke {
         border: none;
+    }
+
+    &.avatar--initials {
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--text-small);
     }
 }
 

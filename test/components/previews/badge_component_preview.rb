@@ -23,4 +23,8 @@ class BadgeComponentPreview < Lookbook::Preview
   def delete
     render(BadgeComponent.new(icon: 'icon_delete', square: true, type: :success))
   end
+
+  def large
+    render(BadgeComponent.new(icon: 'icon_delete', square: true, type: :success, size: :large))
+  end
 end
