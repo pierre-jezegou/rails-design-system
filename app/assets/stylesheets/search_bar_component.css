@@ -1,0 +1,33 @@
+.search-bar {
+    display: flex;
+    background: transparent;
+    column-gap: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.search-field {
+    flex: 1;
+    display: flex;
+
+    input[type="text"] {
+        min-width: 0; /* Prevent unwanted shrinking */
+        width: 100%;
+        padding-inline: 0.5em;
+        background-color: transparent;
+        border: none;
+        height: 2em;
+        color: CurrentColor;
+
+        &::placeholder {
+            color: var(--primary-20);
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+}
