@@ -38,7 +38,8 @@ class BadgeComponent < ViewComponent::Base
       success: "badge--success",
       error: "badge--error",
       danger: "badge--danger",
-      warning: "badge--warning"
+      warning: "badge--warning",
+      plain: "badge--plain"
     }
     badge_types[type] || "badge--default" # Fallback if type isn't found
   end

@@ -4,7 +4,7 @@ class CardComponent < ViewComponent::Base
   erb_template <<-ERB
     <div class="<%= classes %>">
       <% if @title.present? || @header_action_title.present? %>
-        <%= render(CardHeaderComponent.new(title: @title, action_title: @header_action_title, action_button_type: @header_button_type)) %>
+        <%= render(CardHeaderComponent.new(title: @title, left_icon: @left_icon, action_title: @header_action_title, action_button_type: @header_button_type)) %>
       <% end %>
       <div class="card-body">
         <%=content%>
@@ -15,8 +15,9 @@ class CardComponent < ViewComponent::Base
     </div>
   ERB
 
-  def initialize(title: nil, header_action_title: nil, header_button_type: :secondary, footer_main_action_title: nil, footer_secondary_action_title: nil, classes: nil, type: :default, colored_header: false)
+  def initialize(title: nil, left_icon: nil, header_action_title: nil, header_button_type: :secondary, footer_main_action_title: nil, footer_secondary_action_title: nil, classes: nil, type: :default, colored_header: false)
     @title = title
+    @left_icon = left_icon
     @header_action_title = header_action_title
     @footer_main_action_text = footer_main_action_title
     @footer_secondary_action_text = footer_secondary_action_title

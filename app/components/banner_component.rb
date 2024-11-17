@@ -12,7 +12,7 @@ class BannerComponent < ViewComponent::Base
     <% end %>
     
     <% if @header_text.present? %>
-      <%=render(CardComponent.new(title: @header_text, header_button_type: :secondary, header_action_title: 'Essai', classes: classes, colored_header: true)) do%>
+      <%=render(CardComponent.new(title: @header_text, left_icon: 'check',header_button_type: :secondary, header_action_title: 'Essai', classes: classes, colored_header: true)) do%>
       <%= render(BadgeComponent.new(type: @type, icon: 'icon_edit', square: true))%>
         <%=content%>
       <% end %>

@@ -48,12 +48,18 @@
     }
 }
 
-.card-header{
+.card-header {
     display: flex;
     justify-content: space-between;
     align-content: center;
     vertical-align: center;
     width: 100%;
+
+    .card-header-left {
+        display: flex;
+        column-gap: var(--medium-padding);
+        align-items: center;
+    }
 
     h3 {
         color: var(--primary-70);
