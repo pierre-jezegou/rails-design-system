@@ -7,15 +7,17 @@ class CardHeaderComponent < ViewComponent::Base
     <% if @action_title %>
       <%=render(ButtonComponent.new(
         text: @action_title,
-        type: :secondary,
+        type: @action_button_type,
         path: "/",
         size: :tiny
       ))%>
     <% end %>
     </div>
   ERB
-  def initialize(title:, action_title: nil)
+  def initialize(title:, action_title: nil, action_button_type: :primary)
     @title = title
+
     @action_title = action_title
+    @action_button_type = action_button_type
   end
 end

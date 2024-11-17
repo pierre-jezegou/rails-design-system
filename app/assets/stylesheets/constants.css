@@ -21,7 +21,7 @@
     --primary-05: #E4EAEA;
     --primary-00: #F4F7F7;
 
-    --success-font-color: #28a745;
+    --success-font-color: #198754;
     --success-font-color-light: #c3ddc5;
     --danger-font-color: #c82333;
     --danger-font-color-light: #efc8c8;
@@ -31,4 +31,9 @@
     --small-radius: 0.5rem;
     --medium-radius: 1rem;
     --large-radius: 1.5rem;
+
+    --small-padding: 0.5rem;
+    --medium-padding: 0.75rem;
+    --normal-padding: 1rem;
+    --large-padding: 1.25rem;
 }

@@ -5,4 +5,10 @@ class BannerComponentPreview < Lookbook::Preview
       tag.p('Banner main text')
     end
   end
+
+  def success
+    render(BannerComponent.new(header_text: 'Banner message!', type: :success, with_icon: true)) do
+      tag.p('Banner main text')
+    end
+  end
 end
