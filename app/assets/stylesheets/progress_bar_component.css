@@ -1,15 +1,18 @@
-.progress-container {
+progress {
     width: 100%;
+    height: 1em;
+    border-radius: var(--medium-radius);
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
     background-color: var(--primary-05);
     border-radius: var(--medium-radius);
-    height: 1em;
-    overflow: hidden;
-    align-content: center;
+}
 
-    .progress-bar{
-        width: 50%;
-        background-color: var(--primary-30);
-        height: 100%;
-        border-radius: var(--medium-radius);
-    }
+
+progress::-webkit-progress-value {
+    background-color: var(--primary-40);
+    border-radius: var(--medium-radius);
+    height: 100%;
 }
