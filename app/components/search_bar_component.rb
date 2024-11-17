@@ -16,7 +16,7 @@ class SearchBarComponent < ViewComponent::Base
     search_path:,
     method: :get,
     data: { turbo: false },
-    placeholder: 'Type your search here...'
+    placeholder: "Type your search here..."
   )
     super()
     @search_path = search_path

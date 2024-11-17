@@ -3,14 +3,14 @@ class ButtonComponentPreview < Lookbook::Preview
   def default
     render(ButtonComponent.new(
       text: "Delete",
-      path: ''
+      path: ""
     ))
   end
 
   def with_icon
     render(ButtonComponent.new(
       text: "New button",
-      path: '',
+      path: "",
       icon: "icon_plus"
     ))
   end
@@ -18,7 +18,7 @@ class ButtonComponentPreview < Lookbook::Preview
   def outlined
     render(ButtonComponent.new(
       text: "New button",
-      path: '',
+      path: "",
       outlined: true
     ))
   end
@@ -26,7 +26,7 @@ class ButtonComponentPreview < Lookbook::Preview
   def outlined_with_icon
     render(ButtonComponent.new(
       text: "New button",
-      path: '',
+      path: "",
       icon: "icon_plus",
       outlined: true
     ))
@@ -36,7 +36,7 @@ class ButtonComponentPreview < Lookbook::Preview
     render(ButtonComponent.new(
       text: "New button",
       type: :secondary,
-      path: '',
+      path: "",
       icon: "icon_plus"
     ))
   end
@@ -45,7 +45,7 @@ class ButtonComponentPreview < Lookbook::Preview
     render(ButtonComponent.new(
       text: "New button",
       type: :secondary,
-      path: '',
+      path: "",
       icon: "icon_plus",
       outlined: true
     ))
@@ -53,14 +53,14 @@ class ButtonComponentPreview < Lookbook::Preview
 
   def icon_only
     render(ButtonComponent.new(
-      path: '',
+      path: "",
       icon: "icon_edit"
     ))
   end
 
   def plain
     render(ButtonComponent.new(
-      path: '',
+      path: "",
       type: :plain,
       icon: "cross"
     ))

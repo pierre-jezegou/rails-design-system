@@ -16,3 +16,7 @@ progress::-webkit-progress-value {
     border-radius: var(--medium-radius);
     height: 100%;
 }
+progress::-moz-progress-bar {
+    background-color: var(--primary-40);
+    border-radius: var(--medium-radius);
+}

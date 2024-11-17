@@ -10,7 +10,7 @@ class BannerComponent < ViewComponent::Base
         <%=content%>
       <% end %>
     <% end %>
-    
+
     <% if @header_text.present? %>
       <%=render(CardComponent.new(title: @header_text, type: @type, header_button_type: :secondary, classes: classes, colored_header: @colored_header)) do%>
       <% if @content_icon.present?%>
@@ -32,7 +32,7 @@ class BannerComponent < ViewComponent::Base
   def classes
     [
       "banner",
-      "banner--#{@type}",
+      "banner--#{@type}"
     ].compact.join(" ")
   end
 end
