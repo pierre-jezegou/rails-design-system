@@ -67,3 +67,4 @@ end
 
 gem "view_component", "~> 3.20"
 gem "lookbook", ">= 2.3.4"
+gem "actioncable"

@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   # root "posts#index"
 end
 
-
+=begin
 Rails.application.routes.draw do
   if Rails.env.development?
     mount Lookbook::Engine, at: "/lookbook"
   end
 end
+=end
