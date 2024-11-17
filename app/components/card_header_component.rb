@@ -5,7 +5,7 @@ class CardHeaderComponent < ViewComponent::Base
     <div class="card-header">
     <div class="card-header-left">
       <% if !@left_icon.nil? %>
-        <%= render(BadgeComponent.new(icon: @left_icon, square: true, type: :plain)) %>
+        <%= render(BadgeComponent.new(icon: @left_icon, type: :plain)) %>
       <% end %>
       <%=tag.h3(@title, class: "card-header-title")%>
     </div>

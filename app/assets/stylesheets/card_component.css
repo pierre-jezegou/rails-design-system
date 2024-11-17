@@ -35,18 +35,37 @@
         border-bottom: 1px solid CurrentColor;
         background-color: var(--primary-05);
     }
-}
 
-.banner--success{
-    .card-header{
-        background-color: var(--success-font-color);
+    &.banner--success{
+        .card-header{
+            background-color: var(--success-font-color);
+            border: none;
+
+            h3 {
+                color: var(--primary-00);
+            }
+        }
+    }
+
+    &.banner--warning .card-header{
+        background-color: var(--warning-font-color);
+        border: none;
+    }
+
+    &.banner--danger .card-header{
+        background-color: var(--danger-font-color);
         border: none;
 
         h3 {
             color: var(--primary-00);
         }
     }
+
+
+
 }
+
+
 
 .card-header {
     display: flex;

@@ -4,7 +4,7 @@ class CardComponent < ViewComponent::Base
   erb_template <<-ERB
     <div class="<%= classes %>">
       <% if @title.present? || @header_action_title.present? %>
-        <%= render(CardHeaderComponent.new(title: @title, left_icon: @left_icon, action_title: @header_action_title, action_button_type: @header_button_type)) %>
+        <%= render(CardHeaderComponent.new(title: @title, left_icon: default_left_icon(@type), action_title: @header_action_title, action_button_type: @header_button_type)) %>
       <% end %>
       <div class="card-body">
         <%=content%>
@@ -36,5 +36,16 @@ class CardComponent < ViewComponent::Base
       @colored_header ? "card--colored-header" : nil,
       @additional_classes
     ].compact.join(" ")
+  end
+
+  def default_left_icon(type)
+    badge_types = {
+      success: "check",
+      delete: "icon_delete",
+      warning: "icon_warning",
+      danger: "icon_bug",
+      plain: nil
+    }
+    badge_types[type] || nil # Fallback if type isn't found
   end
 end

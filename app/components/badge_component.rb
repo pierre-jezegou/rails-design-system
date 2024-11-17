@@ -41,6 +41,6 @@ class BadgeComponent < ViewComponent::Base
       warning: "badge--warning",
       plain: "badge--plain"
     }
-    badge_types[type] || "badge--default" # Fallback if type isn't found
+    badge_types[type] || "badge--default"
   end
 end
