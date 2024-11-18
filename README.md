@@ -1,24 +1,58 @@
-# README
+# Rails Design System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails project with **ViewComponents** to build modular and maintainable user interfaces.
+This repository provides a foundation for creating web applications with reusable design patterns.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## ✨ Features
+- **ViewComponents**: Build reusable UI components with encapsulated logic and templates.
+- **Modular System**: Add and customize components easily to suit your application's needs.
 
-* System dependencies
+---
 
-* Configuration
+## 🚀 Getting Started
 
-* Database creation
+### Installation Steps
 
-* Database initialization
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/pierre-jezegou/rails-design-system.git
+   cd rails-design-system
+   ```
 
-* How to run the test suite
+2. Install Ruby dependencies:
+   ```bash
+   bundle install
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Start the development server:
+   ```bash
+   bin/rails server
+   ```
 
-* Deployment instructions
+Visit your application at [http://localhost:3000](http://localhost:3000). The Lookbook web interface is at [http://localhost:3000/lookbook](http://localhost:3000/lookbook)
 
-* ...
+---
+
+## 🛠 Using ViewComponents
+
+Add new components in the `app/components` directory. Example:
+
+1. Generate a component:
+   ```bash
+   bin/rails generate component Navigation
+   ```
+
+2. Define the component's behavior in `app/components/navigation_component.rb` and its template in `app/components/navigation_component.html.erb` or directly in component definition with `erb_template`
+
+3. Use the component in views:
+   ```erb
+   <%= render(NavigationComponent.new(title: "My Navigation")) %>
+   ```
+
+---
+
+## 🛡 License
+
+This project is licensed under the ???.
