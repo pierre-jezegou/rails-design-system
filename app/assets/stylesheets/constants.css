@@ -38,3 +38,23 @@
     --normal-padding: 1rem;
     --large-padding: 1.25rem;
 }
+
+
+/* Mode nuit */
+body.dark {
+    --primary-100: #F4F7F7;
+    --primary-95: #E4EAEA;
+    --primary-90: #D3DDDC;
+    --primary-85: #C3D0CF;
+    --primary-80: #B2C3C1;
+    --primary-70: #91A8A7;
+    --primary-60: #708E8C;
+    --primary-50: #4F7471;
+    --primary-40: #3F5D5A;
+    --primary-30: #2F4644;
+    --primary-20: #202E2D;
+    --primary-15: #182322;
+    --primary-10: #101717;
+    --primary-05: #080C08;
+    --primary-00: #000000;
+}
