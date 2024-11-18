@@ -11,16 +11,18 @@ class BadgeComponent < ViewComponent::Base
       <% if @text %>
         <%=tag.p(@text)%>
       <% end %>
+      <%=content%>
     </div>
   ERB
 
-  def initialize(text: nil, icon: nil, square: false, type: :default, border: false, size: :medium)
+  def initialize(text: nil, icon: nil, square: false, type: :default, border: false, size: :medium, no_padding: false)
     @text = text
     @icon = icon
     @square = square
     @type = type
     @border = border
     @size = size
+    @no_padding = no_padding
   end
 
   def classes
@@ -29,6 +31,7 @@ class BadgeComponent < ViewComponent::Base
       @square? "badge--square" : nil,
       @border? "badge--border" : nil,
       "badge--#{@size}",
+      @no_padding? "badge--no_padding" : nil,
       badge_class(@type)
     ].compact.join(" ")
   end

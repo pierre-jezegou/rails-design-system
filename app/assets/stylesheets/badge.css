@@ -24,8 +24,8 @@
             width: var(--text-large);
         }
         &.badge--large {
-            height: var(--text-huge);
-            width: var(--text-huge);
+            height: var(--text-vvhuge);
+            width: var(--text-vvhuge);
 
             svg{
                 width: var(--text-huge);
@@ -61,4 +61,9 @@
         color: var(--warning-font-color);
         background-color: var(--warning-font-color-light);
     }
+
+    &.badge--no_padding {
+        padding: 0;
+    }
+
 }

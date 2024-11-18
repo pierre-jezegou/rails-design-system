@@ -55,7 +55,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   gem "listen"
-  gem "actioncable"
   gem "rubocop", "~> 1.68"
 end
 
