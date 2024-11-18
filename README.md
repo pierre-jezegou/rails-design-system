@@ -3,13 +3,11 @@
 A Rails project with **ViewComponents** to build modular and maintainable user interfaces.
 This repository provides a foundation for creating web applications with reusable design patterns.
 
----
 
 ## ✨ Features
 - **ViewComponents**: Build reusable UI components with encapsulated logic and templates.
 - **Modular System**: Add and customize components easily to suit your application's needs.
 
----
 
 ## 🚀 Getting Started
 
@@ -33,7 +31,6 @@ This repository provides a foundation for creating web applications with reusabl
 
 Visit your application at [http://localhost:3000](http://localhost:3000). The Lookbook web interface is at [http://localhost:3000/lookbook](http://localhost:3000/lookbook)
 
----
 
 ## 🛠 Using ViewComponents
 
@@ -50,8 +47,6 @@ Add new components in the `app/components` directory. Example:
    ```erb
    <%= render(NavigationComponent.new(title: "My Navigation")) %>
    ```
-
----
 
 ## 🛡 License
 
