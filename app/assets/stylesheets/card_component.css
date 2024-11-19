@@ -8,6 +8,7 @@
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
+    background-color: var(--primary-00);
 
     .card-body{
         width: 100%;
