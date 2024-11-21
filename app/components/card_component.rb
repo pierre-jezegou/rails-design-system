@@ -1,51 +1,35 @@
 # frozen_string_literal: true
 
 class CardComponent < ViewComponent::Base
+  renders_one :header, "CardHeaderComponent"
+  renders_one :footer, "CardFooterComponent"
+
   erb_template <<-ERB
-    <div class="<%= classes %>">
-      <% if @title.present? || @header_action_title.present? %>
-        <%= render(CardHeaderComponent.new(title: @title, left_icon: default_left_icon(@type), action_title: @header_action_title, action_button_type: @header_button_type)) %>
-      <% end %>
-      <div class="card-body">
-        <%=content%>
-      </div>
-      <% if @footer_main_action_text.present? || @footer_secondary_action_text.present? %>
-        <%= render(CardFooterComponent.new(main_action: @footer_main_action_text, secondary_action: @footer_secondary_action_text))%>
-      <% end %>
-    </div>
+  <div class="<%=classes%>">
+    <% if header? %>
+      <%= header %>
+    <% end %>
+    <% if content? %>
+      <%=tag.div(content, class: 'card-body') %>
+    <% end %>
+    <% if footer? %>
+      <%= footer %>
+    <% end %>
+    
+  </div>
   ERB
 
-  def initialize(title: nil, left_icon: nil, header_action_title: nil, header_button_type: :secondary, footer_main_action_title: nil, footer_secondary_action_title: nil, classes: nil, type: :default, colored_header: false)
-    @title = title
-    @left_icon = left_icon
-    @header_action_title = header_action_title
-    @footer_main_action_text = footer_main_action_title
-    @footer_secondary_action_text = footer_secondary_action_title
-    @additional_classes = classes
-    @type = type
-    @header_button_type = header_button_type
+  def initialize(colored_header: false, type: :default, padding: true)
     @colored_header = colored_header
+    @type = type
+    @padding = padding
   end
 
   def classes
     [
       "card",
-      !@title.nil? && !@header_action_title.nil? ? "card--with-header" : nil,
-      @footer_main_action_text.nil? || @footer_secondary_action_text.nil? ? "card--no-footer" : nil,
-      "card--type-#{@type}",
-      @colored_header ? "card--colored-header" : nil,
-      @additional_classes
+      @colored_header? "card--colored-header" : nil,
+      !@padding || @colored_header ? "card--no-padding" : nil,
     ].compact.join(" ")
-  end
-
-  def default_left_icon(type)
-    badge_types = {
-      success: "check",
-      delete: "icon_delete",
-      warning: "icon_warning",
-      danger: "icon_bug",
-      plain: nil
-    }
-    badge_types[type] || nil # Fallback if type isn't found
   end
 end

@@ -30,11 +30,15 @@
         padding: var(--medium-padding);
     }
 
+    .card-footer {
+        padding: 0 1em 1em 1em;
+    }
+
     .card-header {
         padding: var(--medium-padding);
         box-sizing: border-box;
         border-bottom: 1px solid CurrentColor;
-        background-color: var(--primary-05);
+        background-color: var(--primary-10);
     }
 
     &.banner--success{
@@ -79,6 +83,10 @@
         display: flex;
         column-gap: var(--medium-padding);
         align-items: center;
+
+        svg {
+            fill: CurrentColor
+        }
     }
 
     h3 {
