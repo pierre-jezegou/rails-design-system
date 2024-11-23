@@ -15,14 +15,14 @@ class CardComponent < ViewComponent::Base
     <% if footer? %>
       <%= footer %>
     <% end %>
-    
   </div>
   ERB
 
-  def initialize(colored_header: false, type: :default, padding: true)
+  def initialize(colored_header: false, type: :default, padding: true, additional_classes: nil)
     @colored_header = colored_header
     @type = type
     @padding = padding
+    @additional_classes = additional_classes
   end
 
   def classes
@@ -30,6 +30,7 @@ class CardComponent < ViewComponent::Base
       "card",
       @colored_header? "card--colored-header" : nil,
       !@padding || @colored_header ? "card--no-padding" : nil,
+      @additional_classes,
     ].compact.join(" ")
   end
 end
