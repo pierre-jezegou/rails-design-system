@@ -1,5 +1,5 @@
 class CardComponentPreview < Lookbook::Preview
-  def default
+  def default_with_all
     render CardComponent.new(type: :default, colored_header: true) do |card|
       card.with_header(
         title: "Example Card Title",
@@ -8,6 +8,7 @@ class CardComponentPreview < Lookbook::Preview
         action_button_type: :primary
       )
       card.with_footer(main_action: 'Submit', secondary_action: 'Cancel')
+      "Body text"
     end
   end
 
