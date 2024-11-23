@@ -3,15 +3,26 @@
 class CardComponent < ViewComponent::Base
   renders_one :header, "CardHeaderComponent"
   renders_one :footer, "CardFooterComponent"
+  renders_one :badge, "BadgeComponent"
 
   erb_template <<-ERB
   <div class="<%=classes%>">
     <% if header? %>
-      <%= header %>
+      <%= render header do |h|%>
+        <% h.with_badge(icon: 'icon_edit', square: true, type: :plain) %>
+        <% h.with_action_button(path: '', text: 'Action button', icon: 'cross', type: :secondary, outlined: true) %>
+      <% end %>
     <% end %>
+    
     <% if content? %>
-      <%=tag.div(content, class: 'card-body') %>
+      <%=tag.div(class: 'card-body') do%>
+        <% if badge? %>
+          <%= badge %>
+        <% end %>
+        <%= content %>
+      <% end %>
     <% end %>
+    
     <% if footer? %>
       <%= footer %>
     <% end %>
@@ -28,6 +39,7 @@ class CardComponent < ViewComponent::Base
   def classes
     [
       "card",
+      "card--type-#{@type}",
       @colored_header? "card--colored-header" : nil,
       !@padding || @colored_header ? "card--no-padding" : nil,
       @additional_classes,

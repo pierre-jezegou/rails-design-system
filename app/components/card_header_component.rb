@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
 class CardHeaderComponent < ViewComponent::Base
+  renders_one :badge, "BadgeComponent"
+  renders_one :action_button, "ButtonComponent"
+
   erb_template <<-ERB
     <div class="<%=classes%>">
       <div class="card-header-left">
-        <% if !@left_icon.nil? %>
-          <%= render(BadgeComponent.new(icon: @left_icon, type: :plain)) %>
+        <% if badge? %>
+          <%= badge %>
         <% end %>
         <%=tag.h3(@title, class: "card-header-title")%>
       </div>
       <% if @action_title %>
-        <%=render(ButtonComponent.new(
-          text: @action_title,
-          type: @action_button_type,
-          path: "/",
-          size: :tiny
-        ))%>
+        <% if action_button %>
+          <%= action_button %>
+        <% end %>
       <% end %>
     </div>
   ERB

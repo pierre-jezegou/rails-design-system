@@ -8,7 +8,6 @@ class BannerComponentPreview < Lookbook::Preview
 
   def with_icon
     render BannerComponent.new(header_text: 'Essai', type: :default, content_icon: "icon_delete", colored_header: true) do |banner|
-      banner.with_badge(icon: "icon_delete", square: true)
       tag.p("Banner main text")
     end
   end

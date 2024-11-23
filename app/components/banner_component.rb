@@ -2,14 +2,11 @@
 
 class BannerComponent < ViewComponent::Base
   include ApplicationHelper
-  renders_one :badge, "BadgeComponent"
 
   erb_template <<-ERB
-    <%=render(CardComponent.new(colored_header: @colored_header, additional_classes: classes)) do |card|%>
+    <%=render(CardComponent.new(colored_header: @colored_header, additional_classes: classes, type: @type)) do |card|%>
       <% card.with_header(title: @header_text, left_icon: "icon_edit", action_title: "Edit") %>
-      <% if badge? %>
-        <%= badge %>
-      <% end %>
+      <% card.with_badge(icon: "icon_delete", square: true) %>
       <%=content%>
     <% end %>
   ERB
@@ -25,7 +22,6 @@ class BannerComponent < ViewComponent::Base
     [
       "banner",
       "banner--#{@type}",
-
     ].compact.join(" ")
   end
 end
