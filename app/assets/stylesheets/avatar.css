@@ -6,6 +6,11 @@
         width: 5rem;
     }
 
+    &.avatar--small{
+        height: 3rem;
+        width: 3rem;
+    }
+
     &.avatar--circle{
         border-radius: 50%;
     }
@@ -26,5 +31,3 @@
         font-size: var(--text-small);
     }
 }
-
-
