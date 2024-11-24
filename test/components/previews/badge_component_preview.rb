@@ -36,7 +36,7 @@ class BadgeComponentPreview < Lookbook::Preview
 
   def with_remove_button_danger
     render BadgeComponent.new(text: 'Essai', type: :danger, size: :large, border: true) do |badge|
-      badge.with_remove_button(path: '', type: :danger, icon: 'cross', size: :small)
+      badge.with_remove_button(path: '', type: :danger, icon: 'cross', size: :small, padding: false)
     end
   end
 end

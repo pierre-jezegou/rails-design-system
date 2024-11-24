@@ -14,7 +14,7 @@ class ButtonComponent < ViewComponent::Base
     <% end %>
   ERB
 
-  def initialize(text: nil, path:, type: :primary, size: :medium, disabled: false, outlined: false, icon: nil, shape: nil, padding: false)
+  def initialize(text: nil, path:, type: :primary, size: :medium, disabled: false, outlined: false, icon: nil, shape: nil, padding: true)
     @text = text
     @path = path
     @type = type
