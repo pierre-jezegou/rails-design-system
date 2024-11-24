@@ -27,4 +27,16 @@ class BadgeComponentPreview < Lookbook::Preview
   def large
     render(BadgeComponent.new(icon: "icon_delete", square: true, type: :success, size: :large))
   end
+
+  def with_remove_button
+    render BadgeComponent.new(text: 'Essai', type: :default, size: :large, border: true) do |badge|
+      badge.with_remove_button(path: '', type: :plain, icon: 'cross', size: :small)
+    end
+  end
+
+  def with_remove_button_danger
+    render BadgeComponent.new(text: 'Essai', type: :danger, size: :large, border: true) do |badge|
+      badge.with_remove_button(path: '', type: :danger, icon: 'cross', size: :small)
+    end
+  end
 end

@@ -28,6 +28,12 @@
     background-color: var(--button-hover-light-bg-color);
 }
 
+.button--no-padding {
+    padding: 0.1em;
+    text-align: center;
+    justify-content: center;
+}
+
 .button--primary {
     --button-fg-color: var(--primary-00);
     --button-bg-color: var(--primary-60);
