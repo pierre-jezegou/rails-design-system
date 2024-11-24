@@ -4,25 +4,14 @@ class BannerComponent < ViewComponent::Base
   include ApplicationHelper
 
   erb_template <<-ERB
-    <% if @type == :default %>
-      <%=render(CardComponent.new(classes: classes)) do%>
-      <%= render(BadgeComponent.new(type: @type, icon: @content_icon, square: true))%>
-        <%=content%>
-      <% end %>
-    <% end %>
-
-    <% if @header_text.present? %>
-      <%=render(CardComponent.new(title: @header_text, type: @type, header_button_type: :secondary, classes: classes, colored_header: @colored_header)) do%>
-      <% if @content_icon.present?%>
-        <%=render(BadgeComponent.new(type: @type, icon: @content_icon, square: true))%>
-      <%end%>
-        <%=content%>
-      <% end %>
+    <%=render(CardComponent.new(colored_header: @colored_header, additional_classes: classes, type: @type)) do |card|%>
+      <% card.with_header(title: @header_text, left_icon: "icon_edit", action_title: "Edit") %>
+      <% card.with_badge(icon: "icon_delete", square: true) %>
+      <%=content%>
     <% end %>
   ERB
 
-  def initialize(text: nil, type: :default, content_icon: false, header_text: nil, colored_header: false)
-    @text = text
+  def initialize(header_text: nil, type: :default, content_icon: false, colored_header: false)
     @type = type
     @content_icon = content_icon
     @header_text = header_text
@@ -32,7 +21,7 @@ class BannerComponent < ViewComponent::Base
   def classes
     [
       "banner",
-      "banner--#{@type}"
+      "banner--#{@type}",
     ].compact.join(" ")
   end
 end

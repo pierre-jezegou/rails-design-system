@@ -25,4 +25,8 @@ class CardFooterComponent < ViewComponent::Base
     @main_action = main_action
     @secondary_action = secondary_action
   end
+
+  def classes
+    "card-footer"
+  end
 end

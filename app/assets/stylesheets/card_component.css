@@ -14,56 +14,10 @@
         width: 100%;
         box-sizing: border-box;
         display: flex;
-        align-items: center;
+        align-items: normal;
         column-gap: 0.75em;
+        text-align: justify;
     }
-}
-
-.card--no-padding{
-    padding: 0;
-}
-
-.card--colored-header {
-    padding: 0;
-
-    .card-body{
-        padding: var(--medium-padding);
-    }
-
-    .card-header {
-        padding: var(--medium-padding);
-        box-sizing: border-box;
-        border-bottom: 1px solid CurrentColor;
-        background-color: var(--primary-05);
-    }
-
-    &.banner--success{
-        .card-header{
-            background-color: var(--success-font-color);
-            border: none;
-
-            h3 {
-                color: var(--primary-00);
-            }
-        }
-    }
-
-    &.banner--warning .card-header{
-        background-color: var(--warning-font-color);
-        border: none;
-    }
-
-    &.banner--danger .card-header{
-        background-color: var(--danger-font-color);
-        border: none;
-
-        h3 {
-            color: var(--primary-00);
-        }
-    }
-
-
-
 }
 
 
@@ -79,6 +33,10 @@
         display: flex;
         column-gap: var(--medium-padding);
         align-items: center;
+
+        svg {
+            fill: CurrentColor
+        }
     }
 
     h3 {
@@ -94,4 +52,52 @@
     display: flex;
     column-gap: 0.25em;
     justify-content: end;
+}
+
+
+/* Specific usages */
+.card--no-padding{
+    padding: 0;
+}
+
+.card--colored-header {
+    padding: 0;
+
+    .card-body{
+        padding: var(--medium-padding);
+    }
+
+    .card-footer {
+        padding: 0 1em 1em 1em;
+    }
+
+    .card-header {
+        padding: var(--medium-padding);
+        box-sizing: border-box;
+        border-bottom: 1px solid CurrentColor;
+        background-color: var(--primary-10);
+
+        h3 {
+            color: CurrentColor;
+        }
+    }
+
+    &.card--type-success{
+        .card-header{
+            background-color: var(--success-font-color);
+            border: none;
+            color: var(--primary-00);
+        }
+    }
+
+    &.card--type-warning .card-header{
+        background-color: var(--warning-font-color);
+        border: none;
+    }
+
+    &.card--type-danger .card-header{
+        background-color: var(--danger-font-color);
+        border: none;
+        color: var(--primary-00);
+    }
 }

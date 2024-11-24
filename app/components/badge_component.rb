@@ -2,6 +2,7 @@
 
 class BadgeComponent < ViewComponent::Base
   include ApplicationHelper
+  renders_one :remove_button, "ButtonComponent"
 
   erb_template <<-ERB
     <div class="<%=classes%>">
@@ -12,6 +13,9 @@ class BadgeComponent < ViewComponent::Base
         <%=tag.p(@text)%>
       <% end %>
       <%=content%>
+      <% if remove_button? %>
+        <%= remove_button %>
+      <% end %>
     </div>
   ERB
 
@@ -32,6 +36,7 @@ class BadgeComponent < ViewComponent::Base
       @border? "badge--border" : nil,
       "badge--#{@size}",
       @no_padding? "badge--no_padding" : nil,
+      remove_button? ? "badge--remove" : nil,
       badge_class(@type)
     ].compact.join(" ")
   end
