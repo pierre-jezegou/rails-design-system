@@ -12,6 +12,7 @@
     background-color: var(--button-bg-color, #007bff);
     text-decoration: none;
     transition: background-color 0.25s ease, transform 0.2s ease;
+    white-space: nowrap;
 }
 .button:hover {
     background-color: var(--button-hover-bg-color, #0056b3);

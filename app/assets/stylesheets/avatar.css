@@ -11,6 +11,11 @@
         width: 3rem;
     }
 
+    &.avatar--tiny{
+        height: 2rem;
+        width: 2rem;
+    }
+
     &.avatar--circle{
         border-radius: 50%;
     }
@@ -21,6 +26,10 @@
 
     &.avatar--no-stroke {
         border: none;
+    }
+
+    &.avatar--stroke-1-secondary {
+        border: 0.2em solid var(--primary-50);
     }
 
     &.avatar--initials {

@@ -1,0 +1,32 @@
+.website--header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .header--logo {
+        flex: initial;
+    }
+
+    .card--search-bar {
+        flex: auto;
+    }
+
+    .profile {
+        flex: initial;
+        &.profile--connected {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+
+            .profile--text {
+                margin: 0;
+                line-height: 1rem;
+
+                .profile--information {
+
+                    font-size: var(--text-small);
+                }
+            }
+        }
+    }
+}

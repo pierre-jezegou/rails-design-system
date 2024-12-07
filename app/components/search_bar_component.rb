@@ -2,7 +2,7 @@ class SearchBarComponent < ViewComponent::Base
   include ApplicationHelper
   erb_template <<-ERB
     <%# locals: () -%>
-    <%= render(CardComponent.new(classes: 'card--no-padding')) do%>
+    <%= render(CardComponent.new(additional_classes: 'card--search-bar card--no-padding')) do%>
       <%= form_with(url: @search_path, method: :get, class: 'search-bar') do |f| %>
           <div class='search-field'>
               <%= f.text_field :q, required: true, placeholder: @placeholder%>
