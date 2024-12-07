@@ -1,0 +1,39 @@
+.card--quiz .card-body{
+    row-gap: 1em;
+
+    .quiz--question {
+        text-align: center;
+        font-size: var(--text-large);
+    }
+
+    .quiz--answers {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5em;
+    }
+
+    .quiz--answer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.quiz--image {
+    overflow: hidden;
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--medium-radius);
+    filter: hue-rotate(180deg);
+    animation: hueRotation 3s infinite;
+}
+
+@keyframes hueRotation {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg); /* Complete rotation */
+    }
+}
