@@ -1,4 +1,5 @@
 class ArticleComponentPreview < Lookbook::Preview
+
   def default
     render ArticleComponent.new(
       title: "Vague de chaleur et canicule la semaine prochaine",

@@ -1,0 +1,51 @@
+<%= render HeaderComponent.new do |header| %>
+    <% header.with_search_bar(search_path: "#") %>
+    <% header.with_profile_logged_in(name: 'Marguerite') %>
+<% end %>
+
+<%= tag.section(class: "website--body") do %>
+  <%= tag.section(class: "body--left-section") do %>
+    <%= render(NavigationComponent.new) do |navigation| %>
+
+      <% navigation.with_section do |section| %>
+        <%= render ButtonComponent.new(text: "Add file", path: "#", icon: "icon_plus",)%>
+      <% end %>
+
+      <% navigation.with_section do |section| %>
+        <% section.with_item(url: "#", label: "Home", icon: "icon_delete") %>
+        <% section.with_item(url: "#", label: "Orders", icon: "icon_edit") %>
+        <% section.with_item(url: "#", label: "Products", icon: "icon_warning") %>
+      <% end %>
+
+      <% navigation.with_section(title: "Sales channels") do |section| %>
+        <% section.with_item(url: "#", label: "Online Store", icon: "icon_bug") %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= tag.section(class: "body--center-section") do %>
+    <%= render(BannerComponent.new(header_text: "Warning message", type: :warning, colored_header: true, content_icon: "icon_warning")) do %>
+      <% tag.p("Detailled text") %>
+    <% end %>
+    <%= tag.div(class: "horizontal-aligned") do %>
+      <%= render QuizComponent.new(question: 'Essai de question vide pour le moment ?') do |quiz| %>
+        <% quiz.with_answers([
+      { text: 'Essai 1' },
+      { text: 'Essai 2' },
+      { text: 'Essai 3' },
+      { text: 'Essai 4' },
+      ]) %>
+      <% end %>
+      <%= render QuizComponent.new(question: 'Essai de question vide pour le moment ?') do |quiz| %>
+        <% quiz.with_answers([
+       { text: 'Essai 1' },
+       { text: 'Essai 2' },
+       { text: 'Essai 3' },
+       { text: 'Essai 4' },
+     ]) %>
+      <% end %>
+    <% end %>
+    <%= render(ArticlesContainerComponent.new(articles: @articles)) %>
+  <% end %>
+  <%= tag.section(class: "body--right-section") %>
+<% end %>

@@ -79,7 +79,7 @@
     }
 
     .card-header {
-        padding: var(--medium-padding);
+        padding: var(--small-padding);
         box-sizing: border-box;
         border-bottom: 1px solid CurrentColor;
         background-color: var(--primary-10);

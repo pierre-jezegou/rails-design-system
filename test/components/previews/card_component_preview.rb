@@ -14,9 +14,8 @@ class CardComponentPreview < Lookbook::Preview
 
   def default2
     render CardComponent.new(type: :success, colored_header: true) do |card|
-      card.with_header(title: "Card title", left_icon: "icon_edit", action_title: "Edit")
+      card.with_header(title: "Card title", left_icon: "icon_edit", action_title: "Edit", type: :success)
       card.with_footer(main_action: 'Submit', secondary_action: 'Cancel')
-      card.with_badge(icon: 'icon_bug', square: true, type: :warning, border: true)
       tag.div("This is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card content", class: "card-content")
     end
   end
@@ -32,15 +31,6 @@ class CardComponentPreview < Lookbook::Preview
       card.with_badge(icon: 'icon_bug', square: true, type: :danger, border: true)
       "This is a card with only the body content."
     end
-  end
-
-  def just_header
-    render CardHeaderComponent.new(
-      title: "Example Card Title",
-      left_icon: "icon_success",
-      action_title: "Edit",
-      action_button_type: :primary
-    )
   end
 =begin
   def default

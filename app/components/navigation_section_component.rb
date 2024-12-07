@@ -12,6 +12,7 @@ class NavigationSectionComponent < ViewComponent::Base
         <% items.each do |item| %>
           <%= item %>
         <% end %>
+        <%= content %>
       </div>
     </div>
   ERB

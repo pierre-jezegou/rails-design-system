@@ -2,7 +2,7 @@ nav {
     background-color: var(--primary-15);
     border-radius: var(--medium-radius);
     padding: var(--large-padding);
-    max-width: 250px;
+    max-width: 200px;
 
     .navigation-section {
         margin-bottom: 16px;
@@ -16,12 +16,13 @@ nav {
         font-size: 1.1rem;
         font-weight: bold;
         margin-bottom: 8px;
+        white-space: nowrap;
     }
 
     .section-content {
         display: flex;
         flex-direction: column;
-        row-gap: 0.5em;
+        row-gap: 0.25em;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -40,7 +41,7 @@ nav {
     .navigation-item {
         display: flex;
         column-gap: 1em;
-        padding: 0.75em 1em;
+        padding: 0.5em 1em;
         text-decoration: none;
         border-radius: var(--large-radius);
         color: CurrentColor;

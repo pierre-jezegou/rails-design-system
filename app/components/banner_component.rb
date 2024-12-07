@@ -5,7 +5,7 @@ class BannerComponent < ViewComponent::Base
 
   erb_template <<-ERB
     <%=render(CardComponent.new(colored_header: @colored_header, additional_classes: classes, type: @type)) do |card|%>
-      <% card.with_header(title: @header_text, left_icon: "icon_edit", action_title: "Edit") %>
+      <% card.with_header(title: @header_text, left_icon: "icon_edit", action_title: "Edit", type: @type) %>
       <% card.with_badge(icon: "icon_delete", square: true) %>
       <%=content%>
     <% end %>

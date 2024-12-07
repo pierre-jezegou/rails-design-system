@@ -1,0 +1,26 @@
+.website--body {
+    margin-top: var(--medium-padding);
+    display: flex;
+    gap: var(--medium-padding);
+
+    .body--left-section {
+        flex: initial;
+    }
+
+    .body--center-section {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--small-padding);
+    }
+
+    .body--right-section {
+        flex: initial;
+    }
+}
+
+
+.horizontal-aligned {
+    display: flex;
+    column-gap: var(--small-padding);
+}

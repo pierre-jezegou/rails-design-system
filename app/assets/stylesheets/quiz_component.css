@@ -1,5 +1,6 @@
 .card--quiz .card-body{
     row-gap: 1em;
+    flex-direction: column;
 
     .quiz--question {
         text-align: center;

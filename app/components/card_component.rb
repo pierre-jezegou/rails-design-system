@@ -9,8 +9,8 @@ class CardComponent < ViewComponent::Base
   <div class="<%=classes%>">
     <% if header? %>
       <%= render header do |h|%>
-        <% h.with_badge(icon: 'icon_edit', square: true, type: :plain) %>
-        <% h.with_action_button(path: '', text: 'Action button', icon: 'cross', type: :default, outlined: true) %>
+        <!-- Change text -->
+        <% h.with_action_button(path: '', text: 'Action button', icon: 'cross', type: :default, outlined: true, size: :small) %>
       <% end %>
     <% end %>
     

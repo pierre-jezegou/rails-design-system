@@ -1,3 +1,4 @@
+
 .website--header {
     display: flex;
     align-items: center;
@@ -5,6 +6,9 @@
 
     .header--logo {
         flex: initial;
+        font-size: large;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     .card--search-bar {
