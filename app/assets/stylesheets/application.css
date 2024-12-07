@@ -15,6 +15,10 @@
     text-decoration: none;
 }
 
+a {
+    color: CurrentColor;
+}
+
 html {
     overflow-y: scroll;
     height: 100%;

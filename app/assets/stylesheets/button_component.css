@@ -106,3 +106,9 @@
     height: 1em;
     fill: CurrentColor;
 }
+
+.button--tag {
+    padding: 0 0.75rem;
+    border-radius: var(--medium-radius);
+    font-size: x-small;
+}
