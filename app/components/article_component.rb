@@ -7,7 +7,7 @@ class ArticleComponent < ViewComponent::Base
   erb_template <<-ERB
     <%= render(CardComponent.new(additional_classes: 'article')) do %>
       <%= tag.div(class: 'article--images') do %>
-        <%= image_tag(@image_url, class: "article--main-image")%>
+        <%= image_tag(@image_url.presence || asset_path('landscape.jpg'), class: "article--main-image")%>
         <% if @source_logo_url %>
           <%= image_tag(@source_logo_url, class: "article--source-logo-image")%>
         <% end %>
@@ -30,7 +30,7 @@ class ArticleComponent < ViewComponent::Base
               <% end %>
             <% end %>
           <% end %>
-          <%= tag.p(@published + " - " + @source, class: "article--information") %>
+          <%= tag.p(@published.to_s + " - " + @source.to_s, class: "article--information") %>
         <% end %>
       <% end %>
     <% end %>

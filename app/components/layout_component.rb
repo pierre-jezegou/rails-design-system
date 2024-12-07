@@ -18,10 +18,8 @@ class LayoutComponent < ViewComponent::Base
       },
       {
         title: "Changements climatiques: le futur de la planète en jeu",
-        image_url: "https://via.placeholder.com/375",
         published: "2j",
         source: "Le Monde",
-        source_logo_url: "https://via.placeholder.com/100",
         tags: [{ text: "Climate", path: "/tags/3" }, { text: "Environment", path: "/tags/4" }],
         content: "Les experts alertent sur les conséquences graves du réchauffement climatique, mettant en lumière les défis pour les décennies à venir."
       }
