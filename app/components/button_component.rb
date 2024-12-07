@@ -11,10 +11,11 @@ class ButtonComponent < ViewComponent::Base
       <% if @text %>
         <%= @text %>
       <% end %>
+      <%= content %>
     <% end %>
   ERB
 
-  def initialize(text: nil, path:, type: :primary, size: :medium, disabled: false, outlined: false, icon: nil, shape: nil, padding: true)
+  def initialize(text: nil, path:, type: :primary, size: :medium, disabled: false, outlined: false, icon: nil, shape: nil, padding: true, additional_classes: nil)
     @text = text
     @path = path
     @type = type
@@ -24,6 +25,7 @@ class ButtonComponent < ViewComponent::Base
     @icon = icon
     @shape = shape
     @padding = padding
+    @additional_classes = additional_classes
   end
 
   def classes
@@ -37,6 +39,7 @@ class ButtonComponent < ViewComponent::Base
       !@shape.nil? ? "button--#{@shape}" : nil,
       @icon && @text.nil? ? "button--icon-only" : nil,
       !@padding ? "button--no-padding" : nil,
+      @additional_classes
     ].compact.join(" ")
   end
 end

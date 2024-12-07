@@ -15,11 +15,13 @@ class CardComponent < ViewComponent::Base
     <% end %>
     
     <% if content? %>
-      <%=tag.div(class: 'card-body') do%>
+      <%= tag.div(class: 'card-body-container') do %>
         <% if badge? %>
           <%= badge %>
         <% end %>
-        <%= content %>
+        <%=tag.div(class: 'card-body') do %> 
+          <%= content %>
+        <% end %>
       <% end %>
     <% end %>
     
