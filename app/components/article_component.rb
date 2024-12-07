@@ -15,7 +15,7 @@ class ArticleComponent < ViewComponent::Base
       <% end %>
       <%= tag.div(class: "article--content") do %>
         <%= tag.div(class: "article--content-body") do %>
-          <%= link_to(@image_url, class: "article--image") do %>
+          <%= link_to(@image_url, class: "article--image", target: "_blank") do %>
             <%= tag.h3(@title, class: "article--title") %>
           <% end %>
           <%= tag.p do%>
