@@ -33,7 +33,14 @@ class LoginFormComponent < ViewComponent::Base
         </div>
       <% end %>
       <%= tag.div(class: 'signup-form-section') do %>
-        <%= render ButtonComponent.new(text: "S'inscrire",  path: "login_form/default") %>
+        <%= tag.div(class: 'signup-text') do %>
+          <%= tag.h3(class: 'login-form-title') do %> Pas encore de compte ? <% end %>
+          <%= tag.p("Demander un compte maintenant !") %>
+          <%= render ButtonComponent.new(text: "S'inscrire", type: :secondary, path: "login_form/default", disabled: true) %>
+        <% end %>
+        <%= tag.div(class:"form-graphic-background") do %>
+          <%= image_tag asset_path "graphic_background.svg", class:"img_preview" %>
+        <% end %> 
       <% end %>
     <% end %>
   ERB
