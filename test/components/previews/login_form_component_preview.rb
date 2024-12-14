@@ -3,5 +3,4 @@ class LoginFormComponentPreview < Lookbook::Preview
   def default
     render(LoginFormComponent.new(action: nil))
   end
-
 end

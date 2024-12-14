@@ -12,14 +12,14 @@ class QuizAnswerComponent < ViewComponent::Base
     <% end %>
   ERB
 
-  def initialize(text: 'No data', disabled: false)
+  def initialize(text: "No data", disabled: false)
     @text = text
     @disabled = disabled
   end
 
   def classes
     [
-      'quiz--answer',
+      "quiz--answer"
     ].compact.join(" ")
   end
 end

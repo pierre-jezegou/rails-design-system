@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 class ArticlesContainerComponent < ViewComponent::Base
-
   renders_many :articles, "ArticleComponent"
 
   erb_template <<-ERB
-    
+
     <%= render(CardComponent.new(type: :default, additional_classes: 'articles-container-card')) do |card| %>
     <% card.with_header(
       title: "Recent articles",

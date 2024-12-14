@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ArticleComponent < ViewComponent::Base
-
   renders_many :tags, "TagComponent"
 
   erb_template <<-ERB
@@ -11,7 +10,7 @@ class ArticleComponent < ViewComponent::Base
         <% if @source_logo_url %>
           <%= image_tag(@source_logo_url, class: "article--source-logo-image")%>
         <% end %>
-        
+    #{'    '}
       <% end %>
       <%= tag.div(class: "article--content") do %>
         <%= tag.div(class: "article--content-body") do %>

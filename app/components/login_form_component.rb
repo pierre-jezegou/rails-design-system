@@ -8,7 +8,7 @@ class LoginFormComponent < ViewComponent::Base
       <%= tag.div(class: 'login-form-section') do %>
         <div class="login-form">
           <%= svg_icon_tag("locker", class: "login-form--icon") %>
-          
+
           <%= tag.h2(class: 'login-form-title') do %>
             Agrega - Se connecter
           <% end %>
@@ -16,20 +16,20 @@ class LoginFormComponent < ViewComponent::Base
             <div class="form-group">
               <%= form.email_field :username, placeholder: "Nom d'utilisateur",class: 'form-control', required: true %>
             </div>
-        
+
             <div class="form-group">
               <%= form.password_field :password, placeholder: 'Mot de passe', class: 'form-control', required: true %>
             </div>
-        
+
             <div class="form-group">
               <%= render ButtonComponent.new(text: "Se connecter",  path: "login_form/default") %>
             </div>
-            
+
             <%= tag.p(path: "#", class: 'forgot-password') do %>
               J'ai oublié mon mot de passe
             <% end %>
           <% end %>
-          
+
         </div>
       <% end %>
       <%= tag.div(class: 'signup-form-section') do %>
@@ -40,12 +40,12 @@ class LoginFormComponent < ViewComponent::Base
         <% end %>
         <%= tag.div(class:"form-graphic-background") do %>
           <%= image_tag asset_path "graphic_background.svg", class:"img_preview" %>
-        <% end %> 
+        <% end %>
       <% end %>
     <% end %>
   ERB
 
-  def initialize(action:, method: 'post')
+  def initialize(action:, method: "post")
     @action = action
     @method = method
   end

@@ -7,7 +7,7 @@ class BannerComponentPreview < Lookbook::Preview
   end
 
   def with_icon
-    render BannerComponent.new(header_text: 'Essai', type: :default, content_icon: "icon_delete", colored_header: true) do |banner|
+    render BannerComponent.new(header_text: "Essai", type: :default, content_icon: "icon_delete", colored_header: true) do |banner|
       tag.p("Banner main text")
     end
   end

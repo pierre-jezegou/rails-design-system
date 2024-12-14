@@ -25,6 +25,6 @@ class CardHeaderComponent < ViewComponent::Base
     @type = type
   end
   def classes
-    ["card-header", "card-header--#{@action_button_type}"].compact.join(" ")
+    [ "card-header", "card-header--#{@action_button_type}" ].compact.join(" ")
   end
 end

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class LoggedInProfileSectionComponent < ViewComponent::Base
-
   erb_template <<-ERB
     <%= link_to("#", class: "profile profile--connected") do %>
       <%= render AvatarComponent.new(size: :tiny, stroke: "1-secondary") %>

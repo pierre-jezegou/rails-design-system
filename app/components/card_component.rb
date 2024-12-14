@@ -13,18 +13,18 @@ class CardComponent < ViewComponent::Base
         <% h.with_action_button(path: '', text: 'Action button', icon: 'cross', type: :default, outlined: true, size: :small) %>
       <% end %>
     <% end %>
-    
+  #{'  '}
     <% if content? %>
       <%= tag.div(class: 'card-body-container') do %>
         <% if badge? %>
           <%= badge %>
         <% end %>
-        <%=tag.div(class: 'card-body') do %> 
+        <%=tag.div(class: 'card-body') do %>#{' '}
           <%= content %>
         <% end %>
       <% end %>
     <% end %>
-    
+  #{'  '}
     <% if footer? %>
       <%= footer %>
     <% end %>
@@ -44,7 +44,7 @@ class CardComponent < ViewComponent::Base
       "card--type-#{@type}",
       @colored_header? "card--colored-header" : nil,
       !@padding || @colored_header ? "card--no-padding" : nil,
-      @additional_classes,
+      @additional_classes
     ].compact.join(" ")
   end
 end

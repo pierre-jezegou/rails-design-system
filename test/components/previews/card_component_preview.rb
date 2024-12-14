@@ -7,7 +7,7 @@ class CardComponentPreview < Lookbook::Preview
         action_title: "Edit",
         action_button_type: :primary
       )
-      card.with_footer(main_action: 'Submit', secondary_action: 'Cancel')
+      card.with_footer(main_action: "Submit", secondary_action: "Cancel")
       "Body text"
     end
   end
@@ -15,7 +15,7 @@ class CardComponentPreview < Lookbook::Preview
   def default2
     render CardComponent.new(type: :success, colored_header: true) do |card|
       card.with_header(title: "Card title", left_icon: "icon_edit", action_title: "Edit", type: :success)
-      card.with_footer(main_action: 'Submit', secondary_action: 'Cancel')
+      card.with_footer(main_action: "Submit", secondary_action: "Cancel")
       tag.div("This is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card contentThis is the card content", class: "card-content")
     end
   end
@@ -28,7 +28,7 @@ class CardComponentPreview < Lookbook::Preview
 
   def only_body_with_badge
     render CardComponent.new do |card|
-      card.with_badge(icon: 'icon_bug', square: true, type: :danger, border: true)
+      card.with_badge(icon: "icon_bug", square: true, type: :danger, border: true)
       "This is a card with only the body content."
     end
   end

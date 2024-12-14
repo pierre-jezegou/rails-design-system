@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuizComponent < ViewComponent::Base
-  renders_many :answers, 'QuizAnswerComponent'
+  renders_many :answers, "QuizAnswerComponent"
 
   erb_template <<-ERB
     <%= render CardComponent.new(additional_classes: 'card--quiz') do |card| %>
@@ -22,7 +22,7 @@ class QuizComponent < ViewComponent::Base
     <% end %>
   ERB
 
-  def initialize(image_url: nil, question:  'No question yet')
+  def initialize(image_url: nil, question:  "No question yet")
     @image_url = image_url
     @question = question
   end

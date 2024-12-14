@@ -21,7 +21,7 @@ class BannerComponent < ViewComponent::Base
   def classes
     [
       "banner",
-      "banner--#{@type}",
+      "banner--#{@type}"
     ].compact.join(" ")
   end
 end
