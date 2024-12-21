@@ -1,0 +1,40 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--medium-radius);
+    overflow: hidden;
+
+    thead {
+        background-color: var(--primary-60);
+        color: var(--primary-00);
+
+        th {
+            padding: var(--medium-padding);
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+
+    tbody {
+        background-color: #ffffff;
+
+        tr {
+            &:hover {
+                background-color: var(--primary-05);
+            }
+
+            td {
+                padding: var(--medium-padding);
+                color: var(--primary-70);
+            }
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--primary-00);
+
+            &:hover {
+                background-color: var(--primary-05);
+            }
+        }
+    }
+}
