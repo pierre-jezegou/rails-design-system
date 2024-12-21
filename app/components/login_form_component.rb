@@ -14,7 +14,7 @@ class LoginFormComponent < ViewComponent::Base
           <% end %>
           <%= form_with url: @action, method: @method, local: true do |form| %>
             <div class="form-group">
-              <%= form.email_field :username, placeholder: "Nom d'utilisateur",class: 'form-control', required: true %>
+              <%= form.text_field :username, placeholder: "Nom d'utilisateur",class: 'form-control', required: true %>
             </div>
 
             <div class="form-group">
@@ -22,7 +22,7 @@ class LoginFormComponent < ViewComponent::Base
             </div>
 
             <div class="form-group">
-              <%= render ButtonComponent.new(text: "Se connecter",  path: "login_form/default") %>
+              <%= render ButtonComponent.new(form_path: "/auth/login", text: "Submit Form", type: :primary, method: :post) %>
             </div>
 
             <%= tag.p(path: "#", class: 'forgot-password') do %>
